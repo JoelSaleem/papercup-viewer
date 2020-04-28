@@ -14,6 +14,7 @@ export const mapAudioDataToBtns = (selectedAudioUrl, setSource) => ({
 }) => (
   <ListButton
     key={title}
+    id={`list-button-${title}`}
     isSelected={() => isAudioFileSelected(selectedAudioUrl, audioUrl)}
     title={title}
     audioUrl={audioUrl}
@@ -53,7 +54,7 @@ export const fetchAudioListServer = async (callback) => {
   callback(list);
 };
 
-const fetchAudioListLocal = (callback) => {
+const fetchAudioListLocal = async (callback) => {
   return get("/fileList.json")
     .then((res) => res.data)
     .then((data) => callback(data.files));
