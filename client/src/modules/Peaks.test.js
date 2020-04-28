@@ -29,9 +29,4 @@ describe('Peaks class operation', () => {
         const peaks = new Peaks('abc', true, '/testpath')
         expect(peaks.getDataUri()).toBe('/testpath/peaks/waveform/abc')
     })
-
-    it('can get access to the peaks instance',async () => {
-        const instance  = await peaks.getInstance()
-        expect(peaks.getInstance()).not.toEqual(null)
-    })
 })
