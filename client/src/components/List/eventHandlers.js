@@ -1,7 +1,7 @@
 import React from "react";
 import ListButton from "./ListButton";
 import { get } from "../../modules/requests";
-import { SERVER_BASE_ADDR, USE_SERVER } from "../../App";
+import { SERVER_BASE_ADDR } from "../../App";
 
 const isAudioFileSelected = (selectedAudioUrl, audioUrl) => {
   return selectedAudioUrl && selectedAudioUrl === audioUrl;
@@ -49,7 +49,7 @@ export const fetchAudioListServer = async (callback) => {
     audioUrl: title + ".wav",
     waveformUrl: title + ".json",
   }));
-  
+
   callback(list);
 };
 

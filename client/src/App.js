@@ -9,7 +9,7 @@ import Uploader from "./components/FileUploader";
 
 // True if we are serving files dynamically from server
 // False if we are using static assets in public dir
-export const USE_SERVER = true;
+export const USE_SERVER = false;
 
 // ip address and port on which the server is running
 export const SERVER_BASE_ADDR = "http://127.0.0.1:8000";
