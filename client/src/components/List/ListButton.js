@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../layout/Button'
+import FlatButton from '../layout/FlatButton'
 
 export default ({ title, audioUrl, waveformUrl, setSource, isSelected }) => {
   const onButtonClicked = () => {
@@ -7,8 +7,8 @@ export default ({ title, audioUrl, waveformUrl, setSource, isSelected }) => {
   }
 
   return (
-    <Button disabled={isSelected()} onClick={onButtonClicked}>
+    <FlatButton selected={isSelected()} onClick={onButtonClicked}>
       {title}
-    </Button>
+    </FlatButton>
   )
 }
