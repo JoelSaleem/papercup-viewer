@@ -56,5 +56,5 @@ If the address or port on which the server is running changes, the SERVER_BASE_A
 5. Production versions, builds and hosting.
 6. More unit test on the client, centered around testing the components (https://enzymejs.github.io/enzyme/docs/api/)
 7. Client-side unit tests centered around testing upload and download of files (https://github.com/axios/moxios)
-8. More unit tests on the server, centered around the handling of files.
+8. More unit tests on the server, centered around the handling of files, and the generating of wave data.
 9. Add zoom functionality for waveform data.
