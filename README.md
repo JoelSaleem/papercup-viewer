@@ -49,9 +49,9 @@ If the address or port on which the server is running changes, the SERVER_BASE_A
 
 
 # Changes to be made if given more time
-1. When using the server, the audio cannot currently be skipped due to the way files are being served from Django. The fix may involve looking at the FileResponse http wrapper used on the server in /peaks/views.py
-2. Make the list a vertical list to allow easy viewing if there are many files to choose from.
-3. Error handling! For example, if the client fails to connect to the server, the messages are output in the logs. It would be better if the error was displayed to the user.
+1. Error handling! For example, if the client fails to connect to the server, the messages are output in the logs. It would be better if the error was displayed to the user to promote good UX. This should have probably been one of the first things to be set up, taking precident before upload functionality.
+2. When using the server, the audio cannot currently be skipped due to the way files are being served from Django. The fix may involve looking at the FileResponse http wrapper used on the server in /peaks/views.py
+3. Make the list a vertical list to allow easy viewing if there are many files to choose from.
 4. Both the server and clients should be run in docker containers. This will enable env variables to be set in the command line, to avoid using flags, and will allow the server to avoid the prerequisite that audiowaveform must be installed on the running machine. Thus far I haven't been able to make audiowaveform to play nicely with docker.
 5. Production versions, builds and hosting.
 6. More unit test on the client, centered around testing the components (https://enzymejs.github.io/enzyme/docs/api/)
