@@ -49,12 +49,13 @@ If the address or port on which the server is running changes, the SERVER_BASE_A
 
 
 # Changes to be made if given more time
-1. Error handling! For example, if the client fails to connect to the server, the messages are output in the logs. It would be better if the error was displayed to the user to promote good UX. This should have probably been one of the first things to be set up, taking precident before upload functionality.
-2. When using the server, the audio cannot currently be skipped due to the way files are being served from Django. The fix may involve looking at the FileResponse http wrapper used on the server in /peaks/views.py
-3. Make the list a vertical list to allow easy viewing if there are many files to choose from.
-4. Both the server and clients should be run in docker containers. This will enable env variables to be set in the command line, to avoid using flags, and will allow the server to avoid the prerequisite that audiowaveform must be installed on the running machine. Thus far I haven't been able to make audiowaveform to play nicely with docker.
-5. Production versions, builds and hosting.
-6. More unit test on the client, centered around testing the components (https://enzymejs.github.io/enzyme/docs/api/)
-7. Client-side unit tests centered around testing upload and download of files (https://github.com/axios/moxios)
-8. More unit tests on the server, centered around the handling of files, and the generating of wave data.
-9. Add zoom functionality for waveform data.
+1. Server-side security. Uploading and serving assets without authentication, validation and sanitization can be very dangerous. This would need to be corrected for production code.
+2. Error handling! For example, if the client fails to connect to the server, the messages are output in the logs. It would be better if the error was displayed to the user to promote good UX. This should have probably been one of the first things to be set up, taking precident before upload functionality.
+3. When using the server, the audio cannot currently be skipped due to the way files are being served from Django. The fix may involve looking at the FileResponse http wrapper used on the server in /peaks/views.py
+4. Make the list a vertical list to allow easy viewing if there are many files to choose from.
+5. Both the server and clients should be run in docker containers. This will enable env variables to be set in the command line, to avoid using flags, and will allow the server to avoid the prerequisite that audiowaveform must be installed on the running machine. Thus far I haven't been able to make audiowaveform to play nicely with docker.
+6. Production versions, builds and hosting.
+7. More unit test on the client, centered around testing the components (https://enzymejs.github.io/enzyme/docs/api/)
+8. Client-side unit tests centered around testing upload and download of files (https://github.com/axios/moxios)
+9. More unit tests on the server, centered around the handling of files, and the generating of wave data.
+10. Add zoom functionality for waveform data.
