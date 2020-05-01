@@ -59,3 +59,4 @@ If the address or port on which the server is running changes, the SERVER_BASE_A
 8. Client-side unit tests centered around testing upload and download of files (https://github.com/axios/moxios)
 9. More unit tests on the server, centered around the handling of files, and the generating of wave data.
 10. Add zoom functionality for waveform data.
+11. Proptypes or Typescript 
